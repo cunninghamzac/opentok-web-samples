@@ -7,6 +7,7 @@ var token;
 function handleError(error) {
   if (error) {
     console.error(error);
+    alert(error.message);
   }
 }
 
@@ -30,6 +31,8 @@ function initializeSession() {
   // initialize the publisher
   var publisherOptions = {
     insertMode: 'append',
+    facingMode: 'environment',
+    publishAudio: false,
     width: '100%',
     height: '100%'
   };
